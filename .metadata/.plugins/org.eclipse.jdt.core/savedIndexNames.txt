@@ -1,0 +1,6 @@
+INDEX VERSION 1.131+/Users/admin/eclipse-workspaces/swing-tutorials/.metadata/.plugins/org.eclipse.jdt.core
+3666421732.index
+111233566.index
+2480374895.index
+2496698348.index
+4287905453.index

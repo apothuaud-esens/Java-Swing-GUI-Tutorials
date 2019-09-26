@@ -1,0 +1,16 @@
+/**
+ * 
+ */
+package io.swing;
+
+import javax.swing.JFrame;
+
+/**
+ * @author admin
+ *
+ */
+public class HelloFrame extends JFrame {
+
+	
+
+}

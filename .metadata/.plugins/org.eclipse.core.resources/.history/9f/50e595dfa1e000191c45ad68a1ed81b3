@@ -1,0 +1,48 @@
+/**
+ * 
+ */
+package io.swing;
+
+import java.awt.Dimension;
+import java.awt.Toolkit;
+
+import javax.swing.JFrame;
+import javax.swing.SwingUtilities;
+
+/**
+ * @author admin
+ *
+ */
+public class HelloFrame extends JFrame {
+
+	private static final long serialVersionUID = 1L;
+
+	public HelloFrame() {
+		
+		SwingUtilities.invokeLater(new Runnable() {
+			
+			@Override
+			public void run() {
+				
+				System.out.println("Starting Hello Frame !");
+				
+				setTitle("Hello Swing !");
+				
+				Dimension dimension = Toolkit.getDefaultToolkit().getScreenSize();
+	
+				int computedWidth = (int) (0.8*dimension.getWidth());
+				int computedHeight = (int) (0.8*dimension.getHeight());
+				
+				Dimension frameDimension = new Dimension(computedWidth, computedHeight);
+				
+				setSize(frameDimension);
+				
+				setVisible(true);
+				setLocationRelativeTo(null);
+				
+				setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+				
+			}
+		});
+	}
+}

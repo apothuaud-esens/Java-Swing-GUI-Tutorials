@@ -1,0 +1,48 @@
+/**
+ * 
+ */
+package io.swing;
+
+import java.awt.Dimension;
+import java.awt.Toolkit;
+
+import javax.swing.JFrame;
+
+/**
+ * @author admin
+ *
+ */
+public class HelloFrame extends JFrame {
+
+	private static final long serialVersionUID = 1L;
+
+	public HelloFrame() {
+		
+		// super and set title
+		super("Hello Swing !");
+
+		// log
+		System.out.println("Starting Hello Frame !");
+		
+		// set size to 80% of screen	
+		setSizeAsScreenPercentage(0.8);
+	
+		// show
+		setVisible(true);
+		
+		// center
+		setLocationRelativeTo(null);
+	
+		// close operation
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+				
+	}
+
+	private void setSizeAsScreenPercentage(double percentage) {
+		Dimension dimension = Toolkit.getDefaultToolkit().getScreenSize();
+		int computedWidth = (int) (percentage * dimension.getWidth());
+		int computedHeight = (int) (percentage * dimension.getHeight());
+		Dimension frameDimension = new Dimension(computedWidth, computedHeight);
+		setSize(frameDimension);
+	}
+}

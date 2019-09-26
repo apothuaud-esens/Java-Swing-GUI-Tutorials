@@ -1,0 +1,10 @@
+package io.swing;
+
+public class App {
+
+	public static void main(String[] args) {
+		
+		HelloFrame helloFrame = new HelloFrame();
+		
+	}
+}

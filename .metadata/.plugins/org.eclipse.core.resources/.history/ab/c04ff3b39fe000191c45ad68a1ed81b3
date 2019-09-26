@@ -1,0 +1,14 @@
+package io.swing;
+
+import javax.swing.JFrame;
+
+public class App {
+
+	public static void main(String[] args) {
+		
+		System.out.println("Hello to console !");
+		
+		JFrame frame = new JFrame("Hello Swing !");
+		
+	}
+}

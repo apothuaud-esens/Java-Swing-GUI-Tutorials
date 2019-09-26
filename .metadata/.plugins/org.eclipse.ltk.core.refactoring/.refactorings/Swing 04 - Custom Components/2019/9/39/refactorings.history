@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;io.swing&apos; to &apos;Swing 05 - Toolbars/src&apos;&#x0A;- Original project: &apos;Swing 04 - Custom Components&apos;&#x0A;- Destination element: &apos;Swing 05 - Toolbars/src&apos;&#x0A;- Original element: &apos;Swing 04 - Custom Components/src/io.swing&apos;" description="Copy package" destination="=Swing 05 - Toolbars/src" element1="/src&lt;io.swing" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1569534380155" version="1.0"/>
+</session>
