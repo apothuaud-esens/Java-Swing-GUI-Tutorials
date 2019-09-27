@@ -23,7 +23,7 @@ public class HelloFormPanel extends JPanel {
 	private JTextField nameField;
 	private JTextField occupationField;
 	private JButton okBtn;
-	private JList<String> ageList;
+	private JList<AgeCategory> ageList;
 	
 	private HelloFormListener helloFormListener;
 
@@ -38,12 +38,12 @@ public class HelloFormPanel extends JPanel {
 		nameField = new JTextField(10);
 		occupationField = new JTextField(10);
 		okBtn = new JButton("OK");
-		ageList = new JList<String>();
+		ageList = new JList<AgeCategory>();
 		
-		DefaultListModel<String> ageModel = new DefaultListModel<String>();
-		ageModel.addElement("Under 18");
-		ageModel.addElement("18 to 65");
-		ageModel.addElement("65 or over");
+		DefaultListModel<AgeCategory> ageModel = new DefaultListModel<AgeCategory>();
+		ageModel.addElement(new AgeCategory(0, "Under 18"));
+		ageModel.addElement(new AgeCategory(1, "18 to 65"));
+		ageModel.addElement(new AgeCategory(2, "65 or over"));
 		ageList.setModel(ageModel);
 		
 		ageList.setPreferredSize(new Dimension(110, 70));
@@ -51,12 +51,14 @@ public class HelloFormPanel extends JPanel {
 		ageList.setSelectedIndex(1);
 		
 		okBtn.addActionListener(new ActionListener() {
+			
 			public void actionPerformed(ActionEvent e) {
+				
 				String name = nameField.getText();
 				String occupation = occupationField.getText();
-				String ageCat = (String) ageList.getSelectedValue();
+				AgeCategory ageCat = (AgeCategory) ageList.getSelectedValue();
 				
-				HelloFormEvent ev = new HelloFormEvent(this,  name, occupation, ageCat);
+				HelloFormEvent ev = new HelloFormEvent(this,  name, occupation, ageCat.getText());
 				
 				if(helloFormListener!=null) {
 					helloFormListener.helloFormEventOccured(ev);
@@ -140,4 +142,36 @@ public class HelloFormPanel extends JPanel {
 	
 	private static final long serialVersionUID = 1L;
 
+}
+
+class AgeCategory{
+	
+	private int id;
+	private String text;
+	
+	public AgeCategory(int id, String text) {
+		
+		this.id = id;
+		this.text = text;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getText() {
+		return text;
+	}
+
+	public void setText(String text) {
+		this.text = text;
+	}
+	
+	public String toString() {
+		return text;
+	}
 }
