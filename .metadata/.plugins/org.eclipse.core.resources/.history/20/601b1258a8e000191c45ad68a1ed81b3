@@ -1,0 +1,7 @@
+package io.swing;
+
+import JPanel;
+
+public class HelloToolbar extends JPanel {
+
+}

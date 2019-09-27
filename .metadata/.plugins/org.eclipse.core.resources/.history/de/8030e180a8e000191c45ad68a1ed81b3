@@ -16,7 +16,6 @@ public class HelloFrame extends JFrame {
 
 	private HelloTextPanel helloTextPanel;
 	private JButton btn;
-	private HelloToolbar helloToolbar;
 
 	public HelloFrame() {
 
